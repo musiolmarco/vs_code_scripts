@@ -1,0 +1,66 @@
+{
+	"Widget Test Body Template": {
+        "prefix": ["widgetTestTemplate", "wTestTemplate"],
+        "body": [
+            "import 'package:flutter/material.dart';",
+            "import 'package:flutter_test/flutter_test.dart';",
+            "",
+            "void main() {",
+            "  late Widget widgetUnderTest;",
+            "",
+            "  setUp(",
+            "\t() {",
+            "\t  widgetUnderTest = ${1:widget};",
+            "\t},",
+            " );",
+            "",
+            "  testWidgets(",
+            "\t'{$2:👉 Widget test description here}',",
+            "\t(WidgetTester widgetTester) async {",
+            "\t  $0",
+            "\t},",
+            "  );",
+            "}"
+        ],
+        "description": "Creating a basic body template for widget testing."
+    },
+	"Unit Test Body Template": {
+        "prefix": "testTemplate",
+        "body": [
+            "import 'package:flutter_test/flutter_test.dart';",
+            "",
+            "void main() {",
+            "  late ${1:SystemUnderTest} sut;",
+            "",
+            "  setUp(",
+            "\t() {",
+            "\t  sut = ${2:systemUnderTest};",
+            "\t},",
+            "  );",
+            "",
+            "  test(",
+            "\t'${3:👉 Test name here}',",
+            "\t() {",
+            "\t  	$0",
+            "\t	},",
+            "  );",
+            "}"
+        ],
+        "description": "Creating a basic body template for unit testing."
+    },
+	"Widget Test Template": {
+        "prefix": "wTest",
+        "body": [
+            "testWidgets(",
+            "  '${1:👉 Widget test description here}',",
+            "  (WidgetTester widgetTester) async {",
+            "\t	 await widgetTester.pumpWidget(",
+            "\t  	 ${2:widgetUnderTest},",
+            "\t 	 );",
+			"		 $0"
+            "   },",
+            " );"
+        ],
+        "description": "Creating a single widget test."
+    },
+}
