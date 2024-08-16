@@ -15,7 +15,7 @@
             " );",
             "",
             "  testWidgets(",
-            "\t'{$2:👉 Widget test description here}',",
+            "\t'${2:👉 Widget test description here}',",
             "\t(WidgetTester widgetTester) async {",
             "\t  $0",
             "\t},",
